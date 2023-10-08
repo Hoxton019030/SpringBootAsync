@@ -19,7 +19,7 @@ public class AsyncController {
     @GetMapping("/")
     public String testAsync() {
         System.out.println("開始測試，執行緒為 - " + Thread.currentThread().getName());
-        asyncTask.testAsync();
+        asyncTask.testAsync(); //這東西會印出非同步測試執行，執行緒為：Async-Service-1
         System.out.println("測試結束，執行緒為 - " + Thread.currentThread().getName());
         return "非同步測試";
     }
